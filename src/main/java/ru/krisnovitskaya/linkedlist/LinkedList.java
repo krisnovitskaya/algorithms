@@ -39,14 +39,5 @@ public interface LinkedList<E> {
             this.item = item;
             this.next = next;
         }
-
-//        public Node<E> getNext() {
-//            return next;
-//        }
-//
-//        public E getItem(){
-//            return item;
-//        }
-
     }
 }
