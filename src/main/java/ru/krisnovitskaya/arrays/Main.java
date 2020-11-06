@@ -38,6 +38,8 @@ public class Main {
         Random random = new Random();
         for(int i = 0; i < ARR_LENGTH; i++){
             Integer next = random.nextInt(maxValue);
+
+
             for (Array<Integer> array : arrays) {
                 array.add(next);
             }
