@@ -97,4 +97,9 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E>, Iterable<E> {
     public Iterator<E> iterator() {
         return new SimpleLinkedListIterator<>(this);
     }
+
+
+    public LinkIterator<E> getIterator(){
+        return new LinkIterator<>(this);
+    }
 }
