@@ -1,13 +1,14 @@
 package ru.krisnovitskaya.trees;
 
+
 public class TestTree {
     public static void main(String[] args) {
-//        testTree();
-        testRemoveElement();
+        testTree();
+//        testRemoveElement();
     }
 
     private static void testRemoveElement() {
-        Tree<Integer> tree = new TreeImpl<>();
+        Tree<Integer> tree = new TreeImpl<>(10);
         tree.add(60);
         tree.add(25);
         tree.add(66);
@@ -24,7 +25,7 @@ public class TestTree {
     }
 
     private static void testTree() {
-        Tree<Integer> tree = new TreeImpl<>();
+        Tree<Integer> tree = new TreeImpl<>(10);
         tree.add(60);
         tree.add(50);
         tree.add(66);
@@ -39,9 +40,10 @@ public class TestTree {
         System.out.println("Find 70: " + tree.contains(70));
         System.out.println("Find 700: " + tree.contains(700));
 
-        tree.display();
-//        tree.traverse(Tree.TraverseMode.IN_ORDER, System.out::println);
-//        tree.traverse(Tree.TraverseMode.PRE_ORDER, System.out::println);
-//        tree.traverse(Tree.TraverseMode.POST_ORDER, System.out::println);
+       tree.display();
+        tree.traverse(Tree.TraverseMode.IN_ORDER, System.out::println);
+        tree.traverse(Tree.TraverseMode.PRE_ORDER, System.out::println);
+        tree.traverse(Tree.TraverseMode.POST_ORDER, System.out::println);
+
     }
 }
