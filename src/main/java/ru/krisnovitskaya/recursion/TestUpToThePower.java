@@ -15,10 +15,23 @@ public class TestUpToThePower {
         }
 
     }
+    public static int getPositivePower(int base, int power) {
+        if (power == 0 && base == 0) throw new IllegalArgumentException("Zero to the zero is indeterminately");
+        if (power < 0) throw new IllegalArgumentException("power is negative");
+
+        if (power == 0) {
+            return 1;
+        } else {
+            return base * getPositivePower(base, power - 1);
+        }
+
+    }
 
     public static void main(String[] args) {
         System.out.println(getPower(5.0, 0));
         System.out.println(getPower(-5.0, 3));
         System.out.println(getPower(5.0, -4));
+        System.out.println(getPositivePower(5, 4));
+
     }
 }
